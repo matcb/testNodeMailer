@@ -4,7 +4,8 @@
   "description": "testing nodemailer ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/matcb/testNodeMailer/issues"
   },
-  "homepage": "https://github.com/matcb/testNodeMailer#readme"
+  "homepage": "https://github.com/matcb/testNodeMailer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
 }

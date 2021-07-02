@@ -1,0 +1,27 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-decoration:none;
+	list-style:none;
+}
+
+
+
+.flexform{
+	display:flex;
+	flex:1 1 100px;
+	max-width:200px;
+	margin:100px auto;
+
+
+}
+
+form> input {
+	margin-bottom:20px;
+}
+
+#bt_submit {
+	padding:9px;
+	border-radius:500px;
+}
