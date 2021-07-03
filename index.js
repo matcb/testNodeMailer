@@ -12,11 +12,36 @@ app.get('/', (req, res) => {
 })
 app.post('/', (req, res) => {
 	console.log(req.body)
+
 	const transport = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
 			user:'mathcarvalhobarreto@gmail.com' ,
 			pass: 'euamomusicadesde1999'
+		}
+	})
+
+	const mailOptions = {
+		from: req.body.email,
+		to: 'mathcarvalhobarreto@gmail.com',
+		text: `
+		Nome do interessado: ${req.body.nome},
+		Sobrenome: ${req.body.sobrenome},
+		telefone: ${req.body.telefone},
+		email: ${req.body.email}
+		`
+	}
+
+	transport.sendMail(mailOptions, (error, info) => {
+		if(error){
+			console.log(error);
+			res.send('error');
+		}
+
+		else
+		{
+			console.log('sucess' + info.response);
+			res.send('sucess');
 		}
 	})
 })

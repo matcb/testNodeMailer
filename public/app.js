@@ -19,14 +19,16 @@ let _email = document.getElementById('email');
   xml.setRequestHeader('content-type', 'application/json');
 
   xml.onload = function(){
-    console.log(xml.responseText);
-    if(xml.responseText == 'sucess'){
-      alert('Email Sent');
-      _nome.value = '';
-      _sobrenome.value = '';
-      _telefone.value = '';
-      _email.value = '';
+    if(xml.responseText){
+      /*console.log(xml.responseText);*/
+
+      _nome.value;
+      _sobrenome.value;
+      _telefone.value;
+      _email.value;
+
     }
+
     else {
       alert('something wrong!');
     }
