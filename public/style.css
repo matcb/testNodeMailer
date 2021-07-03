@@ -7,17 +7,17 @@
 }
 
 
-
-.flexform{
+.flexsec{
 	display:flex;
-	flex:1 1 100px;
-	max-width:200px;
-	margin:100px auto;
-
+	max-width:155px;
+	flex-flow:column;
+	margin:0 auto;
+	flex:1 1 0;
+	margin-top:17%;
 
 }
 
-form> input {
+form > input {
 	margin-bottom:20px;
 }
 
