@@ -1,9 +1,9 @@
-const contactForm = document.querySelector('.formcontact');
+const contactForm = document.querySelector('.form_tag');
 let _nome = document.getElementById('nome');
 let _sobrenome = document.getElementById('sobrenome');
 let _telefone = document.getElementById('telefone');
 let _email = document.getElementById('email');
-let _butsubmit = document.getElementById('bt_submit');
+let _butsubmit = document.getElementById('bt');
 
  _butsubmit.addEventListener('click', (e) => {
   e.preventDefault();
