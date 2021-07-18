@@ -1,27 +1,247 @@
-*{
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-	text-decoration:none;
-	list-style:none;
+/*HEADER*/
+header{
+	padding:1.9%;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap:wrap;
+  background:#f0f0f0;
+  justify-content: space-between;
+  align-items: center;
+
+/*
+	frase de impacto
+	header fixo
+*/
+
 }
 
+header a {
+	font-family:'Roboto', sans-serif;
+		color: #6C757D;
+		font-weight:bold;
+		text-shadow:grey 0 1px 2px ; /*color, off-set x, off-set y , blur*/
+}
 
-.flexsec{
+li a {
+	font-weight:bold;
+		color: #6C757D;
+
+}
+.logo_img{
+	max-width:100%;
+	max-height:35%;
+}
+.u_list{
 	display:flex;
-	max-width:155px;
+
+}
+
+.u_list li {
+	margin-left:25px;
+}
+
+/*QUEM SOMOS*/
+.quemsomos_{
+	display:flex;
+	flex-wrap:wrap;
+	max-width:100%;
+	align-items:center;
+	margin-top:5%;
+	padding-top:45px;
+
+}
+
+.quemsomos_ div{
+	margin:10%;
+}
+.quemsomos_ div p {
+	color: #6C757D;
+	font-size:5vw;
+	font-family:'Roboto', sans-serif;
+	line-height:1.7em;
+}
+
+body{
+	background:#DEE2E6;
+
+}
+
+/*SERVICOS*/
+
+.servicos_{
+	max-width:100%;
+	margin: 3% 10% 3% 10%;
+	color:#f0f0f0;
+}
+.line_before::after{
+	content:'';
+	width:85%;
+	height:1px;
+	background:black;
+	display:block;
+}
+
+
+.servicos_ h1{
+	font-size:5vw;
+	font-family:'Roboto', sans-serif;
+	color: #6C757D;
+
+
+}
+
+.servicos_ div h2 {
+	font-size:2.3vw;
+	font-family:'Roboto', sans-serif;
+		color: #6C757D;
+
+}
+
+
+.grid_container{
+	display:grid;
+	grid-template-rows:repeat(3, 1fr);
+	max-width:100%;
+	justify-content:center;
+	align-items:center;
+}
+
+.grid_container h2{
+	  font-size:3em;
+    column-gap:700px;
+    margin-top:55px;
+    	color: #6C757D;
+
+}
+
+
+.grid_container img {
+	width:100%;
+	margin-top:45px;
+
+}
+
+/*FORM*/
+.contato_{
+	display: flex;
+	flex-wrap: wrap;
 	flex-flow:column;
-	margin:0 auto;
-	flex:1 1 0;
-	margin-top:17%;
+	align-items:center;
+	max-width:100%;
+}
+ /*Labels*/
+label{
+		font-family: 'Montserrat', sans-serif;
+		color: #6C757D;
 
 }
 
-form > input {
-	margin-bottom:20px;
+.label_contact{
+		margin-right:15px;
 }
 
-#bt_submit {
-	padding:9px;
+/*Inputs*/
+#nome{
+	padding:5px;
+	margin-right:15px;
+}
+#sobrenome{
+	padding:5px;
+	margin-right:5px;
+
+}
+#telefone{
+	padding:5px;
+}
+
+#email{
+	padding:5px;
+}
+
+/*InputLabel_container*/
+.inputLabel_container{
+	display: flex;
+	flex:1 0 0;
+	flex-flow:column;
+	align-items:center;
+	justify-content:center;
+
+}
+/**/
+.form_tag{
+	margin-top:1%;
+}
+
+.contato_ h2,h3{
+		color: #6C757D;
+		font-family: 'Montserrat', sans-serif;
+
+
+}
+
+/*checkbox and button*/
+.checkbox_container {
+	margin-top:23%;
+	padding-bottom:17%;
+
+}
+
+.checkbox_container label, input{
+	margin-top:9%;
+}
+
+
+/*BUTTON*/
+
+.bt_div{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+#bt
+{
+	padding: 15px 40px 15px 40px ;
+	background:#ADB5BD;
+	display:block;
+	margin-top:32px;
 	border-radius:500px;
+	font-family:'Roboto', sans-serif;
+	font-weight:bolder;
+	color:black;
+	text-align: center;
+	cursor:pointer;
+
 }
+
+#bt:hover{
+	opacity:75%;
+	cursor:pointer;
+
+}
+
+/*FOOTER*/
+footer{
+	 position:sticky;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#f0f0f0;
+   padding:19px;
+	 display:sticky;
+
+
+footer h3 {
+	color:black;
+   text-align: center;
+ 	font-family:'Roboto',sans-serif;
+
+}
+
+
+/*
+	label e input por padrão
+	tem display:inline...
+	por isso as checkbox comecam
+	em uma nova linha
+	*/

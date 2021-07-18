@@ -3,8 +3,9 @@ let _nome = document.getElementById('nome');
 let _sobrenome = document.getElementById('sobrenome');
 let _telefone = document.getElementById('telefone');
 let _email = document.getElementById('email');
+let _butsubmit = document.getElementById('bt_submit');
 
-  contactForm.addEventListener('click', (e) => {
+ _butsubmit.addEventListener('click', (e) => {
   e.preventDefault();
 
   let formData = {
@@ -19,19 +20,20 @@ let _email = document.getElementById('email');
   xml.setRequestHeader('content-type', 'application/json');
 
   xml.onload = function(){
-    if(xml.responseText){
-      /*console.log(xml.responseText);*/
+    if(xml.readyState == 4){
 
       _nome.value;
       _sobrenome.value;
       _telefone.value;
       _email.value;
 
+      alert('Dados enviados')
+
+    } else {
+      alert('ALGO DEU ERRADO')
     }
 
-    else {
-      alert('something wrong!');
-    }
+
   }
   xml.send(JSON.stringify(formData));
 })

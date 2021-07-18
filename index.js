@@ -16,20 +16,22 @@ app.post('/', (req, res) => {
 	const transport = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
-			user:'mathcarvalhobarreto@gmail.com' ,
-			pass: 'euamomusicadesde1999'
+			user:'engfabionavarro@gmail.com' ,
+			pass: '31342902'
 		}
 	})
 
 	const mailOptions = {
 		from: req.body.email,
-		to: 'mathcarvalhobarreto@gmail.com',
+		to: 'engfabionavarro@gmail.com',
 		text: `
 		Nome do interessado: ${req.body.nome},
 		Sobrenome: ${req.body.sobrenome},
-		telefone: ${req.body.telefone},
-		email: ${req.body.email}
-		`
+		Telefone: ${req.body.telefone},
+		Email: ${req.body.email}
+		`,
+		subject: 'Cotação',
+		sender: req.body.email
 	}
 
 	transport.sendMail(mailOptions, (error, info) => {

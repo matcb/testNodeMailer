@@ -1,38 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <html>
 <head>
+	<title>Consórcio Reserva</title>
 	<meta charset="utf-8">
-	<title>NodeMailer test</title>
-	<link rel="stylesheet" type="text/css" href="/style.css">
+	<meta name="author" content="Matheus Barreto">
+	<meta name="description" content="Consórcio, Consórcios">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Consórcio, Reserva, Consórcio Reserva, Consórcio Rio de janeiro">
+		<link rel="stylesheet" href="/reset.css">
+		<link rel="stylesheet" href="/style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
-	<section class="flexsec">
+	<header>
+		<a href="/">CRED SILPER</a>
+		<nav>
+			<ul class="u_list">
+				<li><a href="#quemsomos">QUEM SOMOS</a></li>
+				<li><a href="#servicos">SERVIÇOS</a></li>
+				<li><a href="#contato">CONTATO</a></li>
+			</ul>
+		</nav>
+	</header>
 
+	<section class="quemsomos_" id="quemsomos">
+		<div>
+			<p style="text-align:center;">
 
-			<form action="index.js" method="post" autocomplete="on" class="formcontact" id="formcontact">
-
-			<label for="nome">Nome:</label>
-			<input type="text" name="nome" id="nome" placeholder="nome" required maxlength="35">
-
-			<label for="sobnome">Sobrenome:</label>
-			<input type="text" name="sobrenome" id="sobrenome" placeholder="sobrenome" required maxlength="35">
-
-			<label for="tel">Telefone:</label>
-			<input type="tel" name="telefone" id="telefone" placeholder="(21) 0000-00000" required maxlength="35" pattern="[0-9]{2} [0-9]{9}">
-
-			<label for="nome">Email:</label>
-			<input type="email" name="email" id="email" placeholder="email" required maxlength="35">
-
-			<input type="submit" id="bt_submit" name="submit" value="ENVIAR">
-
-			</form>
-
-
-
-
+				REPRESENTANTE AUTORIZADO ADMINISTRADORA DE CRÉDITO RESERVA. <br>
+				EMPRESA COM MAIS DE <span style="font-weight:bold;">40 ANOS</span>
+				 NO MERCADO DE ADMINISTRAÇÃO DE CONSÓRCIOS NO BRASIL.
+			</p>
+		</div>
 	</section>
 
-	<script type="text/javascript" src="/app.js"></script>
+
+<section class="servicos_" id="servicos">
+
+		<h1 class="line_before">NOSSO CONSÓRCIO ABRANGE:</h1>
+
+		<div class="grid_container">
+
+		<div>
+			<h2>AUTOMÓVEIS</h2>
+			<img src="/183461111_1260298047701068_4534458449933112091_n.jpg">
+		</div>
+
+		<div>
+			<h2>IMÓVEIS</h2>
+			<img src="/191200065_815187492445629_891449624214614862_n.jpg">
+		</div>
+
+		<div>
+			<h2>MÁQUINAS</h2>
+			<img src="/186333407_1082611408931422_937395687863085859_n.jpg">
+		</div>
+		</div>
+
+
+</section>
+
+
+	<section class="contato_" id="contato">
+		<h2>ENTRE EM CONTATO E FAÇA SUA COTAÇÃO</h2>
+		<form action="/index.js" method="POST" autocomplete="on" class="form_tag">
+		<div class="inputLabel_container">
+
+			<div>
+				<label class="label_contact" for="nome">SEU NOME:</label>
+				<input type="text" id="nome" name="nome" maxlength="10" placeholder="NOME" autocomplete="on" required>
+			</div>
+
+			<div>
+					<label for="email" class="label_contact">EMAIL:</label>
+					<input type="email" id="email" name="email" max-length="35" placeholder="EMAIL" autocomplete="on" required>
+			</div>
+
+			<div>
+				<label class="label_contact" for="Sobrenome">SOBRENOME:</label>
+				<input type="text" name="Sobrenome" id="sobrenome" maxlength="10" placeholder="SOBRENOME" autocomplete="on" required>
+			</div>
+
+			<div>
+				<label class="label_contact" for="telefone">TELEFONE:</label>
+				<input type="tel" name="telefone" id="telefone" pattern="[0-9]{2} [0-9]{9}" placeholder="(21) 0000-0000" autocomplete="on" required>
+			</div>
+		</div>
+
+				<div class="checkbox_container">
+					<h2>MODALIDADES DE CONSÓRCIO</h2>
+					<div>
+						<label for="imoveis">IMÓVEIS</label>
+						<input type="checkbox" id="imoveis"name="imoveis" value="imoveis"><br>
+					</div>
+
+					<div>
+						<label for="automoveis">AUTOMÓVEIS</label>
+						<input type="checkbox" name="automoveis" id="automoveis"value="automoveis"><br>
+					</div>
+
+
+					<div>
+						<label for="maquinas">MÁQUINAS</label>
+						<input type="checkbox" name="maquinas" id="maquinas" value="maquinas"><br>
+					</div>
+
+
+					<div class="bt_div">
+					<input id="bt" type="submit" name="btsubmit" value="ENVIAR">
+					</div>
+
+				</div>
+			</form>
+	</section>
+
+
+
+<footer>
+	<h3> 2021 - CRED SILPER<br></h3>
+</footer>
+<script type="text/javascript" src="/app.js"></script>
 </body>
 </html>
